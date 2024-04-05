@@ -29,4 +29,16 @@ model Order {
   paidAt      DateTime?
   createdAt   DateTime    @default(now())
   updatedAt   DateTime    @updatedAt
+
+  orderItem OrderItem[]
+}
+
+model OrderItem {
+  id        String @id @default(uuid())
+  productId Int
+  quantity  Int
+  price     Float
+
+  order Order? @relation(fields: [orderId], references: [id])
+  orderId String?
 }
