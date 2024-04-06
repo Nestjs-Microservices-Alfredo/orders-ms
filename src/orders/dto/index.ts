@@ -3,3 +3,4 @@ export * from './update-order.dto';
 export * from './status.dto';
 export * from './change-status.dto';
 export * from './order-item.dto';
+export * from './paid-order.dto';
